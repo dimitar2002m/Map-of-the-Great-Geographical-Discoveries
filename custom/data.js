@@ -52,7 +52,7 @@ XP.exp = {
       bg: 'Първият европеец, заобиколил най-южната точка на Африка – нос Добра надежда (наричан от него Бурен нос). Плаването показва, че от Атлантическия океан може да се стигне до Индийския, и отваря пътя към Индия.',
       en: 'The first European to round the southern tip of Africa, the Cape of Good Hope (which he called the Cape of Storms). His voyage showed that the Atlantic can be linked with the Indian Ocean and opened the way to India.' } },
 
-  'lyr_E_2:2': { photo: 'Vasco_da_Gama',
+  'lyr_E_2:2': { photo: 'Vasco_da_Gama_',
     name: { bg: 'Васко да Гама', en: 'Vasco da Gama' },
     life: { bg: 'ок. 1460 – 1524', en: 'c. 1460 – 1524' },
     country: { bg: 'Португалия', en: 'Portugal' },
@@ -61,7 +61,7 @@ XP.exp = {
       bg: 'Открива морския път от Европа до Индия около Африка. През 1498 г. достига Каликут на Малабарския бряг и осигурява на Португалия пряк достъп до търговията с подправки.',
       en: 'Discovered the sea route from Europe to India around Africa. In 1498 he reached Calicut on the Malabar coast, giving Portugal direct access to the spice trade.' } },
 
-  'lyr__5:3': { photo: 'columbus',
+  'lyr__5:3': { photo: 'Columb',
     name: { bg: 'Христофор Колумб', en: 'Christopher Columbus' },
     life: { bg: '1451 – 1506', en: '1451 – 1506' },
     country: { bg: 'Испания', en: 'Spain' },
