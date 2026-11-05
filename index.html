@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="bg">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #c3d3ed;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <title>Великите географски открития</title>
+        <link rel="stylesheet" href="custom/custom.css">
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+
+        <div id="xp-toolbar">
+            <div class="xp-seg" id="xp-lang" role="group" aria-label="Език / Language">
+                <button type="button" data-lang="bg" class="on" aria-pressed="true">БГ</button>
+                <button type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+            <button type="button" class="xp-btn" id="xp-btn-table" aria-expanded="false" aria-controls="xp-table">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 2.5h13v11h-13z M1.5 6.5h13 M1.5 10h13 M6 2.5v11" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span>Атрибутивна таблица</span>
+            </button>
+        </div>
+        <div id="xp-legend" aria-label="Легенда"></div>
+        <section id="xp-table" aria-label="Атрибутивна таблица"></section>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
+        <script src="resources/olms.js"></script>
+        <script src="layers/world_1500_0.js"></script><script src="layers/_1.js"></script><script src="layers/E_2.js"></script><script src="layers/_3.js"></script><script src="layers/_4.js"></script><script src="layers/_5.js"></script><script src="layers/_6.js"></script>
+        <script src="styles/world_1500_0_style.js"></script><script src="styles/_1_style.js"></script><script src="styles/E_2_style.js"></script><script src="styles/_3_style.js"></script><script src="styles/_4_style.js"></script><script src="styles/_5_style.js"></script><script src="styles/_6_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>
+        <script src="layers/land_bg.js"></script><script src="layers/polities.js"></script>
+        <script src="custom/data.js"></script>
+        <script src="custom/custom.js"></script>
+    </body>
+</html>
