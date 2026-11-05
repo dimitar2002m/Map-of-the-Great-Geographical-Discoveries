@@ -1,0 +1,135 @@
+/* Великите географски открития – стил на картата и интерфейса */
+:root {
+  --ocean: #c3d3ed;
+  --land: #fef4d0;
+  --navy: #2d3192;
+  --ink: #262626;
+  --muted: #667086;
+  --card: #fffdf6;
+  --line: #c3cde6;
+  --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+html, body {
+  background: var(--ocean);
+  font-family: var(--font);
+  overflow: hidden;
+}
+#map { width: 100%; height: 100%; background: var(--ocean); }
+
+/* ---------- горна лента: език + таблица ---------- */
+#xp-toolbar {
+  position: fixed; top: 10px; right: 10px; z-index: 1100;
+  display: flex; gap: 8px; align-items: stretch;
+}
+.xp-seg {
+  display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  background: var(--card); box-shadow: 0 2px 8px rgba(0, 0, 0, .22);
+}
+.xp-seg button {
+  border: 0; background: transparent; color: var(--navy); cursor: pointer;
+  padding: 0 14px; min-height: 38px; font: 700 13px/1 var(--font); letter-spacing: .03em;
+}
+.xp-seg button + button { border-left: 1px solid var(--line); }
+.xp-seg button.on { background: var(--navy); color: #fff; }
+.xp-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--navy);
+  padding: 0 14px; min-height: 38px; cursor: pointer; font: 700 13px/1 var(--font);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .22);
+}
+.xp-btn[aria-expanded="true"] { background: var(--navy); color: #fff; }
+.xp-seg button:focus-visible, .xp-btn:focus-visible, .xp-close:focus-visible {
+  outline: 3px solid #f6931e; outline-offset: 2px;
+}
+
+/* ---------- легенда ---------- */
+#xp-legend {
+  position: fixed; left: clamp(12px, 33vw, 520px); bottom: 12px; z-index: 1050;
+  background: rgba(255, 253, 246, .93); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 14px 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, .22);
+  font-size: 13px; color: var(--ink); max-width: 260px; transition: bottom .15s ease;
+}
+#xp-legend h2 { margin: 0 0 6px; font: 700 12px/1.2 var(--font); letter-spacing: .06em; color: var(--navy); }
+#xp-legend label {
+  display: flex; align-items: center; gap: 8px; padding: 3px 0; cursor: pointer; line-height: 1.2;
+}
+#xp-legend input { margin: 0; accent-color: var(--navy); width: 15px; height: 15px; }
+#xp-legend svg { flex: none; }
+#xp-legend .xp-note { margin: 7px 0 0; padding-top: 7px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+
+/* ---------- атрибутивна таблица ---------- */
+#xp-table {
+  position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 1060;
+  max-height: 36vh; display: none; flex-direction: column;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 6px 26px rgba(0, 0, 0, .3); overflow: hidden;
+}
+#xp-table.open { display: flex; }
+.xp-table-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 8px 8px 8px 16px; border-bottom: 1px solid var(--line); background: #eef2fb;
+}
+.xp-table-head h2 { margin: 0; font: 700 14px/1.2 var(--font); color: var(--navy); }
+.xp-close {
+  border: 0; background: transparent; cursor: pointer; color: var(--navy);
+  width: 36px; height: 36px; border-radius: 8px; font: 400 24px/1 var(--font);
+}
+.xp-close:hover { background: rgba(45, 49, 146, .1); }
+.xp-table-wrap { overflow: auto; }
+table.xp-tbl { border-collapse: collapse; width: 100%; min-width: 900px; }
+.xp-tbl th, .xp-tbl td { min-width: 0; text-align: left; vertical-align: top; }
+.xp-tbl th {
+  position: sticky; top: 0; z-index: 1; background: #f6f8fd; color: var(--navy);
+  font: 700 12px/1.2 var(--font); padding: 9px 12px; border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+.xp-tbl td { padding: 9px 12px; border-bottom: 1px solid #e6eaf4; font-size: 12.5px; line-height: 1.4; color: var(--ink); }
+.xp-tbl tbody tr { cursor: pointer; }
+.xp-tbl tbody tr:hover, .xp-tbl tbody tr:focus-visible { background: #fff4d6; outline: none; }
+.xp-tbl td.xp-c-route { width: 56px; }
+.xp-tbl td.xp-c-year { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+.xp-tbl td.xp-c-name { min-width: 150px; }
+.xp-tbl td.xp-c-desc { min-width: 300px; }
+.xp-tbl .xp-sec { display: block; color: var(--muted); font-size: 11.5px; }
+
+/* ---------- popup ---------- */
+.ol-popup { padding: 12px 14px 12px; border-radius: 12px; font-family: var(--font); }
+#popup-content { max-width: min(430px, 82vw); max-height: 62vh; margin-top: 0; }
+#popup-content .xp-card + .xp-card { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.ol-popup-closer { font-family: var(--font); top: 6px; right: 8px; font-size: 14px; }
+.xp-card {
+  --c: #2d3192; display: grid; grid-template-columns: 88px 1fr; gap: 6px 14px; color: var(--ink);
+  font-size: 12.5px; line-height: 1.4;
+}
+.xp-photo, .xp-avatar {
+  width: 88px; height: 112px; border-radius: 8px; object-fit: cover; display: block;
+  border: 2px solid var(--c); background: #eef2fb;
+}
+.xp-avatar {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  font: 700 26px/1 var(--font); color: var(--c); letter-spacing: .02em;
+  background: color-mix(in srgb, var(--c) 12%, #fff);
+}
+.xp-name { font: 700 16px/1.2 var(--font); margin: 2px 22px 2px 0; }
+.xp-sub { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+.xp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.xp-chip {
+  display: inline-block; padding: 2px 9px; border-radius: 99px; font-weight: 700; font-size: 12px;
+  background: var(--c); color: #fff;
+}
+.xp-info dl { margin: 0; }
+.xp-info dt { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.xp-info dd { margin: 0 0 5px; }
+.xp-desc { grid-column: 1 / -1; margin: 4px 0 0; padding-top: 8px; border-top: 1px solid #e6eaf4; }
+.xp-desc b { color: var(--navy); }
+
+@media (max-width: 640px) {
+  #xp-toolbar { left: 56px; right: 8px; justify-content: flex-end; }
+  .xp-btn { padding: 0 10px; font-size: 12px; }
+  #xp-legend { left: 8px !important; bottom: 8px; padding: 8px 10px; font-size: 12px; max-width: 190px; }
+  #xp-table { left: 6px; right: 6px; bottom: 6px; max-height: 58vh; }
+  .xp-card { grid-template-columns: 70px 1fr; gap: 4px 10px; }
+  .xp-photo, .xp-avatar { width: 70px; height: 90px; font-size: 20px; }
+}
+
+body.xp-table-open #xp-legend { display: none; }
