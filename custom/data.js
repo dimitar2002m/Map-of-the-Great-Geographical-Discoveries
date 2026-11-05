@@ -43,7 +43,7 @@ XP.layers = [
 /* ---------- Атрибути на експедициите (ключ = слой:id на обекта) ----------
    photo = име на файл в папка images/ (без разширение; .jpg/.jpeg/.png/.webp се пробват автоматично) */
 XP.exp = {
-  'lyr_E_2:1': { photo: 'dias',
+  'lyr_E_2:1': { photo: 'Dias',
     name: { bg: 'Бартоломеу Диаш', en: 'Bartolomeu Dias' },
     life: { bg: 'ок. 1450 – 1500', en: 'c. 1450 – 1500' },
     country: { bg: 'Португалия', en: 'Portugal' },
@@ -52,7 +52,7 @@ XP.exp = {
       bg: 'Първият европеец, заобиколил най-южната точка на Африка – нос Добра надежда (наричан от него Бурен нос). Плаването показва, че от Атлантическия океан може да се стигне до Индийския, и отваря пътя към Индия.',
       en: 'The first European to round the southern tip of Africa, the Cape of Good Hope (which he called the Cape of Storms). His voyage showed that the Atlantic can be linked with the Indian Ocean and opened the way to India.' } },
 
-  'lyr_E_2:2': { photo: 'da-gama',
+  'lyr_E_2:2': { photo: 'Vasco_da_Gama',
     name: { bg: 'Васко да Гама', en: 'Vasco da Gama' },
     life: { bg: 'ок. 1460 – 1524', en: 'c. 1460 – 1524' },
     country: { bg: 'Португалия', en: 'Portugal' },
@@ -70,7 +70,7 @@ XP.exp = {
       bg: 'Търси западен път към Индия и вместо това стига до Бахамските острови (о. Сан Салвадор, 12 октомври 1492 г.), Куба и Хаити. Започват постоянните контакти между Европа и Америка.',
       en: 'Seeking a western route to Asia, he instead reached the Bahamas (San Salvador, 12 October 1492), Cuba and Hispaniola. Lasting contact between Europe and the Americas begins.' } },
 
-  'lyr__6:1': { photo: 'cabot',
+  'lyr__6:1': { photo: 'John Cabot',
     name: { bg: 'Джон Кабот', en: 'John Cabot' },
     life: { bg: 'ок. 1450 – ок. 1500', en: 'c. 1450 – c. 1500' },
     country: { bg: 'Англия', en: 'England' },
@@ -79,7 +79,7 @@ XP.exp = {
       bg: 'Италианец (Джовани Кабото) на английска служба. През 1497 г. достига бреговете на Северна Америка (района на Нюфаундленд и нос Бретон) – основание за по-късните английски претенции към региона.',
       en: 'An Italian (Giovanni Caboto) in English service. In 1497 he reached the coast of North America (the Newfoundland and Cape Breton area), the basis of later English claims in the region.' } },
 
-  'lyr__5:4': { photo: 'columbus',
+  'lyr__5:4': { photo: 'Columb',
     name: { bg: 'Христофор Колумб', en: 'Christopher Columbus' },
     life: { bg: '1451 – 1506', en: '1451 – 1506' },
     country: { bg: 'Испания', en: 'Spain' },
@@ -88,7 +88,7 @@ XP.exp = {
       bg: 'Четвърто плаване: изследва бреговете на Централна Америка – от Хондурас през Никарагуа и Коста Рика до Панама – в търсене на проход към Индийския океан.',
       en: 'Fourth voyage: he explored the coast of Central America – from Honduras through Nicaragua and Costa Rica to Panama – looking for a passage to the Indian Ocean.' } },
 
-  'lyr__5:1': { photo: 'magellan',
+  'lyr__5:1': { photo: 'Magelan',
     name: { bg: 'Фернандо Магелан', en: 'Ferdinand Magellan' },
     life: { bg: 'ок. 1480 – 1521', en: 'c. 1480 – 1521' },
     country: { bg: 'Испания', en: 'Spain' },
@@ -97,7 +97,7 @@ XP.exp = {
       bg: 'Португалец на испанска служба. Открива пролива в южния край на Южна Америка (Магеланов проток, 1520 г.) и пресича Тихия океан. Загива във Филипините през 1521 г., но експедицията му извършва първото околосветско плаване.',
       en: 'A Portuguese navigator in Spanish service. He found the strait at the southern tip of South America (Strait of Magellan, 1520) and crossed the Pacific. He was killed in the Philippines in 1521, but his expedition completed the first circumnavigation of the globe.' } },
 
-  'lyr__5:2': { photo: 'elcano',
+  'lyr__5:2': { photo: 'Elcano',
     name: { bg: 'Хуан Себастиан де Елкано', en: 'Juan Sebastián Elcano' },
     life: { bg: '1486 – 1526', en: '1486 – 1526' },
     country: { bg: 'Испания', en: 'Spain' },
@@ -106,7 +106,7 @@ XP.exp = {
       bg: 'След смъртта на Магелан поема командването и през 1522 г. завършва първото околосветско плаване на кораба „Виктория“: през Индийския океан, около нос Добра надежда, обратно до Испания.',
       en: 'After Magellan’s death he took command and in 1522 completed the first circumnavigation of the globe aboard the Victoria: across the Indian Ocean, around the Cape of Good Hope and back to Spain.' } },
 
-  'lyr__3:1': { photo: 'cartier',
+  'lyr__3:1': { photo: 'Cartier',
     name: { bg: 'Жак Картие', en: 'Jacques Cartier' },
     life: { bg: '1491 – 1557', en: '1491 – 1557' },
     country: { bg: 'Франция', en: 'France' },
@@ -115,7 +115,7 @@ XP.exp = {
       bg: 'Изследва залива Свети Лаврентий и бреговете на Канада и обявява земите за френско владение (1534 г.) – началото на Нова Франция.',
       en: 'Explored the Gulf of St. Lawrence and the coast of Canada and claimed the land for France (1534) – the beginning of New France.' } },
 
-  'lyr__4:1': { photo: 'tasman',
+  'lyr__4:1': { photo: 'Abel_Tasman',
     name: { bg: 'Абел Тасман', en: 'Abel Tasman' },
     life: { bg: '1603 – 1659', en: '1603 – 1659' },
     country: { bg: 'Нидерландия', en: 'Netherlands' },
