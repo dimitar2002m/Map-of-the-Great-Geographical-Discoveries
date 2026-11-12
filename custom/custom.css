@@ -133,3 +133,14 @@ table.xp-tbl { border-collapse: collapse; width: 100%; min-width: 900px; }
 }
 
 body.xp-table-open #xp-legend { display: none; }
+
+/* ---------- период и надпис ---------- */
+#xp-caption {
+  position: fixed; top: 10px; left: 56px; z-index: 1000; max-width: min(46vw, 520px);
+  padding: 8px 14px; border-radius: 8px; background: rgba(255,253,246,.93); border: 1px solid var(--line);
+  box-shadow: 0 2px 8px rgba(0,0,0,.22); font: 700 14px/1.25 var(--font); color: var(--navy);
+}
+@media (max-width: 760px) {
+  #xp-toolbar { flex-wrap: wrap; justify-content: flex-end; }
+  #xp-caption { top: 104px; left: 8px; max-width: 70vw; font-size: 12px; }
+}
